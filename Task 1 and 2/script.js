@@ -52,9 +52,63 @@
 
 // function is fully hoisted , Var variable is hoisted but not inicialization is hosted , let didt host
 
+// Question 3. a
+
+// if else practice
+
 // let age = prompt("Your age")
 // if (age>=18){
 //     console.log("Adult")
 // }
 // else
 //     console.log("Minor")
+
+// Question 3. b
+
+// let marks = 87;
+
+// if (marks>=90)
+//     console.log("A Grade")
+
+// else if (marks>=70)
+//     console.log("B Grade")
+
+// else if (marks>=50)
+//     console.log("C Grade")
+// else 
+//     console.log("fail")
+
+// why it shows fail when no value is asign
+
+// Question 3. c
+
+// let city;
+// city =("Bhopal")
+// if (city==="Bhopal"){
+//     console.log("Madhya Pradesh")
+// }
+// else if ( city=== "Delhi"){
+//     console.log("Capital")
+// }
+// else 
+//     console.log("Unknown City")
+
+
+// Question 3. d
+
+// let score=254;
+// let marks = score>=35 ? console.log("Pass"):console.log("Fail") 
+// cosnsole.log("Marks")
+
+// ? --> if  , :--> else (Ternari Operators)
+
+// Question 3. e
+
+// let temperature;
+// temperature =33;
+// let b = temperature>30?console.log("Hot"):console.log("Pleasant")
+
+// Question 3. f
+
+let day;
+switch(day):~
