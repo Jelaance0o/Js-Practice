@@ -142,4 +142,6 @@
 
 let age;
 let country;
-let alu = age>18 && country; 
+age = 18
+country = ("india")
+let alu = age>=18 && country==("india")?console.log("Eligible"):console.log("Not Eligible"); 
