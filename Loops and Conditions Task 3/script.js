@@ -57,24 +57,28 @@
 //     console.log ("Not Eligible")
 // }
 
+// ------------------------------------------------------
+                    //  Exception Handling i think
+                    
+// let age = prompt("What's Your age..?? ")
+// if(age===null){
+//     console.error("You Pressed Cancle");
+// }
+// else{
+//     if(age.trim()==="") //trim() use to trim spaces in string
+//         console.error("B**** dhang se likh le");
+//         else{
+//            age= Number(age.trim())
 
-let age = prompt("What's Your age..?? ")
-if(age===null){
-    console.error("You Pressed Cancle");
-}
-else{
-    if(age.trim()==="") //trim() use to trim spaces in string
-        console.error("B**** dhang se likh le");
-        else{
-           age= Number(age.trim())
+//             if(isNaN(age))
+//                 console.error("NOT A NUMBER")
+//             else{
+//                 console.log("Pakkka ye number hi hai")
+//             }
+//         }    
+// }
 
-            if(isNaN(age))
-                console.error("Samajh ni a rahi tere ko")
-            else{
-                console.log("Pakkka ye number hi hai")
-            }
-        }    
-}
+// ---------------------------------------------------
 // error handling code    
 
 // 8. Print multiplication table of 5 Use loop to print 5 × 1 to 5 × 10. ✅ 
@@ -83,13 +87,42 @@ else{
 //     console.log(`5 X ${i} = ${5*i}`)
 // }
 
-// 9. Count how many numbers between 1 and 15 are greater than 8 Loop and count conditionally.
+// 9. Count how many numbers between 1 and 15 are greater than 8 Loop and count conditionally.✅
 
 // let count = 0
-// for(i = 1;i<16;i++){
+// for(i=1;i<16;i++){
 //     if(i>8){
 //         console.log(i)
-//     count++
+//         count++;
 //     }
 // }
-// console.log(`Total = ${count}`)
+// console.log(count++)
+
+
+
+// 10. Ask user for password and print access status Hardcoded correct password. Compare with user input.✅
+
+
+let CorrectPass = ("nana")
+
+let UserPass = prompt("Enter Correcct Password")
+
+if(UserPass===CorrectPass){
+    console.log("Access Granted...!!")
+}
+else{
+    console.error("ABE LAWDE(")
+}
+
+
+// 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
+
+// let RealPass = "xoxo"
+
+// let UserPass = prompt("Enter Password..!")
+
+// let count = 0
+// while (count ===3 ) {
+//     if(UV PAJI HAHAH)
+   
+// }
