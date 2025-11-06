@@ -103,26 +103,42 @@
 // 10. Ask user for password and print access status Hardcoded correct password. Compare with user input.✅
 
 
-let CorrectPass = ("nana")
+// let CorrectPass = ("nana")
 
-let UserPass = prompt("Enter Correcct Password")
+// let UserPass = prompt("Enter Correct Password")
 
-if(UserPass===CorrectPass){
-    console.log("Access Granted...!!")
-}
-else{
-    console.error("ABE LAWDE(")
-}
-
+// if(UserPass===null){
+//     console.error("You Pressed Cancle")
+// }
+// else{    
+//     if(UserPass===CorrectPass){
+//         console.log("Access Granted...!!")
+//     }
+//     else{
+//         console.error("Access Deny")
+//     }
+// }
 
 // 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
 
-// let RealPass = "xoxo"
 
-// let UserPass = prompt("Enter Password..!")
+let pass = ("xoxo")
+attempt = 0
+let hogaya = false
 
-// let count = 0
-// while (count ===3 ) {
-//     if(UV PAJI HAHAH)
-   
-// }
+let password = prompt("Password dedo")
+attempt++
+if(password===pass)hogaya=true
+
+while(password!==pass){
+    if(attempt===3){
+        console.error("Account lock")
+        break;
+    }
+    password = prompt("Password dedo")
+    attempt++
+    if(password===pass)hogaya=true
+}
+if(password===pass)console.log("Account Unlock")
+
+// That Was Difficult ✅
