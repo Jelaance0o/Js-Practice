@@ -119,26 +119,99 @@
 //     }
 // }
 
-// 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked”
+// 11. Allow only 3 attempts to enter correct password If user gets it right early, stop. If not → “Account locked” ✅
 
 
-let pass = ("xoxo")
-attempt = 0
-let hogaya = false
+// let pass = ("xoxo")
+// let attempt = 0;
+// let hogaya = false
+// let password = prompt("Password dedo ")
+// attempt++
+// if(pass===password)hogaya= true
 
-let password = prompt("Password dedo")
-attempt++
-if(password===pass)hogaya=true
+// while(password!==pass){
+//     if(attempt===3){
+//         console.error("Account Locked")
+//         break;
+//     } 
 
-while(password!==pass){
-    if(attempt===3){
-        console.error("Account lock")
-        break;
+//     password = prompt("Password dedo ")
+//     attempt++
+//     if(pass===password)hogaya= true
+// }
+
+// if(hogaya === true)console.log("Access Granted")
+ // That Was Difficult 
+
+
+//12.  Ask user for words until they type “stop”. Count how many times they typed “yes” Loop until "stop" is typed. Count "yes". ✅
+
+// let word = prompt("Enter a Word")
+// let count = 0;
+// if(word==="yes"){
+//     count++
+// }
+// while(word!=="stop")
+// {
+//     word = prompt("Enter a Word")
+//     console.log(word)
+//     if(word==="yes"){
+//     count++
+// }
+// }
+// console.log(count)
+
+
+// 13. Print numbers divisible by 7 from 1 to 50 Use modulo % and loop.✅
+
+// for(i = 1;i<51;i++){
+//     if(i%7===0)
+//         console.log(i)
+// }
+
+
+
+//14. Sum of all odd numbers from 1 to 30 Add only odd numbers. Print final sum.✅
+ 
+
+// let total = 0;
+// for(i=1;i<31;i++){
+//     if(i%2!==0){
+//         console.log(i)
+//         total  = total+i
+//     }
+// }
+// console.log(total) 
+
+
+// 15. Keep asking number until user enters an even number Use while loop. Stop only if input is even. ✅
+
+// let num = +prompt("Give me the number")
+
+//     while(num%2!==0){
+//         num = +prompt("Give me the number")
+//     }
+
+// 16. Print numbers between two user inputs Input start and end using prompt() → print all between.
+
+// let start = +prompt("Starting value")
+// let end = +prompt("ending value")
+
+// if(start<end){
+//     console.error
+// }
+// for(i=start;i<=end;i++){
+//     console.log(i)
+// }
+
+
+// 17. Print only first 3 odd numbers from 1 to 20 Use loop. Stop with break after 3 odd prints.
+let count=0
+
+for(i=1;i<20;i++){
+    if(count===3)break
+    if(i%2!==0){
+        console.log(i)
+        count++
     }
-    password = prompt("Password dedo")
-    attempt++
-    if(password===pass)hogaya=true
 }
-if(password===pass)console.log("Account Unlock")
-
-// That Was Difficult ✅
