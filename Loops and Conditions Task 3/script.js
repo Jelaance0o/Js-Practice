@@ -192,7 +192,7 @@
 //         num = +prompt("Give me the number")
 //     }
 
-// 16. Print numbers between two user inputs Input start and end using prompt() → print all between.
+// 16. Print numbers between two user inputs Input start and end using prompt() → print all between.✅
 
 // let start = +prompt("Starting value")
 // let end = +prompt("ending value")
@@ -205,7 +205,7 @@
 // }
 
 
-// 17. Print only first 3 odd numbers from 1 to 20 Use loop. Stop with break after 3 odd prints.
+// 17. Print only first 3 odd numbers from 1 to 20 Use loop. Stop with break after 3 odd prints.✅
 let count=0
 
 for(i=1;i<20;i++){
