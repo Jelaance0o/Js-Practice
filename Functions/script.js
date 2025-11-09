@@ -5,7 +5,34 @@
 //     console.log("Hare Krsna")
 // }
 
+// Parameter
 
+// function abcd(age,name){
+    //parameter
+// }
+// abcd(12,stuti)
+
+// Rest Perameter
+
+// function abcd(a,b, ...c){
+//     console.log(a,b,c);
+// }
+// abcd(1,2,3,4,5,6);
+
+// default perameter
+
+// function abcd(a=0,b=0,c=0){
+//     console.log(a,b,c)
+// }
+// abcd(1,2)
+
+// SPREAD
+
+function abcd(a,b,c,d){
+    console.log(a,b,c,d);
+}
+let arr =[1,2,3,4]
+abcd(...arr)
 
 // First Class Function -> Functions ko value ki tarha save kr sakte hai.
 
