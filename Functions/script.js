@@ -28,11 +28,18 @@
 
 // SPREAD
 
-function abcd(a,b,c,d){
-    console.log(a,b,c,d);
+// function abcd(a,b,c,d){
+//     console.log(a,b,c,d);
+// }
+// let arr =[1,2,3,4]
+// abcd(...arr)
+
+// FAT ARROW FUNCTION
+
+()=>{
+    console.log("Helllooo Bacchhoon")
 }
-let arr =[1,2,3,4]
-abcd(...arr)
+
 
 // First Class Function -> Functions ko value ki tarha save kr sakte hai.
 
