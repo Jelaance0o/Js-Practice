@@ -36,9 +36,11 @@
 
 // FAT ARROW FUNCTION
 
-()=>{
-    console.log("Helllooo Bacchhoon")
-}
+// ()=>{
+//     console.log("Helllooo Bacchhoon")
+// }
+
+
 
 
 // First Class Function -> Functions ko value ki tarha save kr sakte hai.
@@ -49,6 +51,8 @@
 
 // let car = nana()
 // console.log(car)
+
+
 
 // Higher Order function --> function jo aapne return mein functions return kare ya perameter mein function accept kare
 
@@ -61,6 +65,9 @@
 
 
 // abcd()()
+
+
+
 
 // pure functions --> functions jo ki bahar kuch change na kare like 
 
@@ -86,3 +93,77 @@
 
 
 // abcd()()
+
+// Basic Function , Array & Object code Tasks
+
+//  1. Write a function `sayHello()` that prints `"Hello JavaScript"`.
+
+// function sayHello(val){
+//     console.log(`Hey ${val}`)
+// }
+// sayHello("Stuti")
+// sayHello("Jelaance")
+
+// 2. Create a function `add(a, b)` that returns their sum and log the result.
+
+// function add (a , b){
+//     return (a+b)
+// }
+// console.log(add(432,4423))
+
+// 3. Write a function with a default parameter `name = "Guest"` that prints `"Hi <name>"`.
+
+// function cola(Name="Guest" ){
+//     console.log(`Hi ${Name}`)
+// }
+// cola("Stuti")
+// cola()
+
+// 4. Use rest parameters to make a function that adds unlimited numbers.
+
+// function UnLimited(...val){
+//     let sum = 0
+
+//     val.forEach(function(val){
+//       sum = sum + val;
+//     }    
+// );
+// console.log(sum)
+// }
+// UnLimited(1,2,3,4,5,34,56)
+
+
+// 5. Create an IIFE that prints `"I run instantly!"`.
+
+// (function(){
+//     console.log("I run instantly!")
+// })();
+
+// 6. Make a nested function where the inner one prints a variable from the outer one.
+
+// function outer(){
+//     let val = "Hello hi"
+//     function inner(){
+//         console.log(val)
+//     }
+//     inner()
+// }
+// outer()()
+
+// 7. Create an array of 5 fruits. Add one at the end and remove one from the beginning.
+
+let fruit = [apple,mango,grapes,strawberry,lichi]
+console.log(fruit[3])
+
+
+
+
+
+
+
+
+
+
+// 8. Use a `for` loop to print all elements of an array.
+// 9. Create an object `person` with keys `name`, `age`, and `city`, and print each key’s value.
+// 10. Use `setTimeout()` to log `"Time’s up!"` after 2 seconds.

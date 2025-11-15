@@ -48,11 +48,11 @@
 
 // reduce  --> use to do something to aaray and get get a single value
 
-// let arr = [1,2,3,4,5,6];
+let arr = [1,2,3,4,5,6];
 
-// let ans = arr.reduce(function(accumlator,val){
-//     return accumlator+ val
-// },0)  
+let ans = arr.reduce(function(accumlator,val){
+    return accumlator+ val
+},0)  
 // here 0 is iniciation value of accumalater
 
 // acumlotor will store return value and val = will store new value from th array  
