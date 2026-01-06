@@ -134,13 +134,6 @@
 
 
 
-
-
-
-
-
-
-
 // ⸻
 
 // SECTION 5: Constructor Function and Prototype
@@ -172,28 +165,6 @@
 // 	28.	Bind this function to an object and store the returned function in a variable.
 // 	29.	Call the bound function later and observe the output.
 // 	30.	Explain why bind is useful when functions are executed later or inside callbacks.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -272,3 +243,54 @@
 
 // console.log(student1.introduce())
 
+
+// const obj = {
+//     sayName: function(){
+//         console.log(this)  //function ke andar this is avlue hoti Hai object 
+//     },
+//     sayArrowName:()=>{
+//             console.log(this)             //arrow fun take value of this from parent and object uis in global space so its output window
+//     }
+// }
+// obj.sayName()
+// obj.sayArrowName()
+
+// bina class ke constructer fucntion aise banta tha 
+
+// function Animal(){
+//     this.name = "Harsh"
+// }
+// const sn1 = new Animal(); //Cosntructer function
+
+// function User(val){
+//     this.name = val;
+// }
+// User.prototype.loggedin = function(){
+//     console.log(this.name);
+// }
+// let an1 = new User("stuti")
+// let an2 = new User("jelaance") 
+
+// call bind apply -------------------------------------------------
+
+function abcd(){
+    console.log(this.name);      //in this way we will find windows in output || kisi bhi function mein thsi ki value window hoti hai
+}
+
+let obj = {
+    name: "jeelance"
+}
+
+abcd.call(obj);   //can change the value of this using call keywords ||Now obj will be the value of this
+// BIND---------------------------------------------
+
+function alu(a,b,c,d){
+    console.log(this.name)
+}
+
+let obj2 ={
+    name:"harsh"
+}
+
+
+alu.apply(obj2,[1,2,3,4])
