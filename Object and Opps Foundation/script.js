@@ -5,46 +5,42 @@
 // Write down (in words or code) what problems you will face if you keep using plain objects. ✅
 
 
-// const laptop ={
-//     brand: "Lenovo",
-//     price: 54000,
-//     start(){
-//     return "Laptop Started"
-//     },
-//     increase(){
-//         const rate = this.price + (this.price*10/100);
-//         return rate
-//     }
-// }
-// const laptop2 ={
-//     brand: "Asus",
-//     price: 60000,
-//     start(){
-//     return "Laptop Started"
-//     },
-//     increase(){
-//         const rate = this.price + (this.price*10/100);
-//         return rate
-//     }
-// }
-// const laptop3 ={
-//     brand: "HP",
-//     price: 67000,
-//     start(){
-//     return "Laptop Started"
-//     },
-//     increase(){
-//         const rate = this.price + (this.price*10/100);
-//         return rate
-//     }
-// }
-// console.log(laptop.increase())
-// console.log(laptop2.increase())
-// console.log(laptop3.increase())
+const laptop ={
+    brand: "Lenovo",
+    price: 54000,
+    start(){
+    return "Laptop Started"
+    },
+    increase(){
+        const rate = this.price + (this.price*10/100);
+        return rate
+    }
+}
+const laptop2 ={
+    brand: "Asus",
+    price: 60000,
+    start(){
+    return "Laptop Started"
+    },
+    increase(){
+        const rate = this.price + (this.price*10/100);
+        return rate
+    }
+}
+const laptop3 ={
+    brand: "HP",
+    price: 67000,
+    start(){
+    return "Laptop Started"
+    },
+    increase(){
+        const rate = this.price + (this.price*10/100);
+        return rate
+    }
+}
+console.log(laptop.increase(), laptop2.increase(), laptop3.increase());
 
 // long code ,confusion
-
-
 
 
 // ⸻-----------------------------------------------------
@@ -59,23 +55,22 @@
 // Why is class considered a better option than writing similar objects again and again? ✅
 
 
-// class Employee{
-//     constructor(name,salary){
-//         this.name = name;
-//         this.salary = salary;
-//     }
-//         showDetails(){
-//             console.log("Name: "+ this.name + " - " + "Salary: "+ this.salary);
-//         }
-// }
-// const p = new Employee("Ayush",50000)
-// const p2 = new Employee("Jeelance",30000)
-// const p3 = new Employee("Stuti",80000)
-// const p4 = new Employee("Pratham",40000)
-// p.showDetails()
-// p2.showDetails()
-// p3.showDetails()
-// p4.showDetails()
+class Employee{
+    constructor(name,salary){
+        this.name = name;
+        this.salary = salary;
+    }
+        showDetails(){
+            console.log("Name: "+ this.name + " - " + "Salary: "+ this.salary);
+        }
+}
+
+const p2 = new Employee("Jeelance",30000)
+const p3 = new Employee("Stuti",80000)
+
+p2.showDetails()
+p3.showDetails()
+
 
 
 // ⸻-------------------------------------------------
@@ -88,26 +83,21 @@
 // 	10.	Create two bank accounts and deposit money into only one.
 // Observe and explain why the second account is not affected.
 
-// class BankAccount{
-//     constructor(accountHolderName,balance){
-//         this.accountHolderName = accountHolderName;
-//         this.balance = balance;
-//         console.log(accountHolderName,balance)
-//     }
-//     deposit(depositAmount){
-//         this.balance += depositAmount
-//         console.log(`Total Amount: `+ this.balance) 
-//     }
-// }
-
-// let account =  new BankAccount("Ayush",5000)
-// console.log(account)
-// account.deposit(42000)
-
-// let account2 = new BankAccount("Jelaance", 3490)
-// console.log(account2)
-// account.deposit(43245)
-
+class BankAccount{
+    constructor(accountHolderName,balance){
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+        console.log(accountHolderName,balance)
+    }
+    deposit(depositAmount){
+        this.balance += depositAmount
+        console.log(`Total Amount: `+ this.balance) 
+    }
+}
+const user1 = new BankAccount("jeelance",543)
+const  user2 = new BankAccount("Stuti",5509)
+user1.deposit(54332)
+user2.deposit(54332)
 // ⸻------------------------------------
 
 // SECTION 4: Understanding this (Very Important)
@@ -117,40 +107,68 @@
 // Observe what happens to this and explain why.
 // 	14.	Modify the code so that this works correctly again.
 
-// const profile = {
-//     username: "Stuti",
-//     printName: function(){
-//         return this.username
-//     }
-// }
-// const name = profile.printName()
-// console.log(name)
 
 
+const profile ={
+    username: "Stuti",
+    printName: function(){
+        console.log(this.username)
+    }
+}
 
+profile.printName()
 
-
-
-
-
-
-// ⸻
+// ============--------------------------------------------------------=
 
 // SECTION 5: Constructor Function and Prototype
 // 	15.	Create a constructor function called Vehicle that accepts type and wheels.
 // 	16.	Add a method describe inside the constructor and observe memory behavior when multiple objects are created.
 // 	17.	Move the same method to Vehicle.prototype and repeat the test.
 // 	18.	Explain why the prototype approach is preferred.
+// if we give evry object a function then it can crash when so many client vist it take so much space
+
+function Vehicle (type, wheels){
+    this.type = type;
+    this.wheels = wheels;
+}
+
+Vehicle.prototype.describe = function(){
+    console.log(this.type,this.wheels)
+}
+const alu = new Vehicle("JC",5)
+const alu2 = new Vehicle("PC",8)
+
+alu.describe()
+alu2.describe()
+
+
 
 // ⸻
 
-// SECTION 6: call Method Practice
+// SECTION 6: call Method Practice-----------------------------------------------  bnṃ/bṁṇ
 // 	19.	Create a function showBrand that prints this.brand.
 // 	20.	Create two different objects with brand values.
 // 	21.	Use call to execute showBrand for both objects.
 // 	22.	Explain what problem call is solving here.
 
-// ⸻
+
+function showBrand(){
+ console.log(this.brand);   
+}
+
+const obj = {
+    brand: "Samsung"
+}
+const obj2 = {
+    brand: "Apple"
+}
+
+// showBrand.call(obj1) // obj1 become object of this in showBrand function
+// showBrand.call(obj2)
+
+
+
+// ⸻--------------------------------------------
 
 // SECTION 7: apply Method Practice
 // 	23.	Create a function introduce that accepts two arguments: city and role, and prints name, city, and role using this.name.
@@ -158,7 +176,24 @@
 // 	25.	Use apply to call introduce using the object and an array of arguments.
 // 	26.	Explain in simple words how apply differs from call.
 
-// ⸻
+function introduce(city,role){
+    console.log(this.name,city,role) 
+}
+
+const obj1 = {
+    name: "Jelaance" 
+}
+
+// apply tells JavaScript:
+// “Run introduce and treat person as this.”
+
+introduce.apply(obj1,["Delhi","Developer"])
+
+// Both call and apply decide what this points to.
+// call → arguments passed one by one
+// apply → arguments passed inside an array
+
+// ⸻-----------------------------------------
 
 // SECTION 8: bind Method Practice
 // 	27.	Create a function greet that prints “Hello” followed by this.name.
@@ -166,14 +201,17 @@
 // 	29.	Call the bound function later and observe the output.
 // 	30.	Explain why bind is useful when functions are executed later or inside callbacks.
 
+function greet(){
+    console.log(this.greet)
+}
 
+const obj5 = {
+    greet: "Hello Hi"
+}
+const bindGreet = greet.bind(obj5)
+bindGreet();
 
-
-
-
-
-
-
+// bind → store it first, call it later || it return function
 
 
 // Create a user object that stores name and email and has a login method which prints "User logged in."
@@ -273,24 +311,24 @@
 
 // call bind apply -------------------------------------------------
 
-function abcd(){
-    console.log(this.name);      //in this way we will find windows in output || kisi bhi function mein thsi ki value window hoti hai
-}
+// function abcd(){
+//     console.log(this.name);      //in this way we will find windows in output || kisi bhi function mein thsi ki value window hoti hai
+// }
 
-let obj = {
-    name: "jeelance"
-}
+// let obj = {
+//     name: "jeelance"
+// }
 
-abcd.call(obj);   //can change the value of this using call keywords ||Now obj will be the value of this
-// BIND---------------------------------------------
+// abcd.call(obj);   //can change the value of this using call keywords ||Now obj will be the value of this
+// // BIND---------------------------------------------
 
-function alu(a,b,c,d){
-    console.log(this.name)
-}
+// function alu(a,b,c,d){
+//     console.log(this.name)
+// }
 
-let obj2 ={
-    name:"harsh"
-}
+// let obj2 ={
+//     name:"harsh"
+// }
 
 
-alu.apply(obj2,[1,2,3,4])
+// alu.apply(obj2,[1,2,3,4])
